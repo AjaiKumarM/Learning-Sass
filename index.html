@@ -5,16 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web design with SASS</title>
+
+    <!-- Title Logo -->
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <!-- Css link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <!-- header start -->
     <header>
-        <h1>Hello World</h1>
+        <div class="navbar">
+            <div>
+                <a href="/" class="navbar-anc"><h2 class="navbar-heading">WebDesign  <span class="navbar-tamil">{ தமிழ் }</span></h2></a>
+            </div>
+            <div>
+                <ul class="navbar-list">
+                    <li class="navbar-list-items">
+                        <a class="active" href="/">home</a>
+                    </li>
+                    <li class="navbar-list-items">
+                        <a href="/">about</a>
+                    </li>
+                    <li class="navbar-list-items">
+                        <a href="/">roadmap</a>
+                    </li>
+                    <li class="navbar-list-items">
+                        <a href="/">courses</a>
+                    </li>
+                    <li >
+                        <a href="/" class="btn-primary">contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
     <!-- headers End -->
 
     <!-- main start -->
-    <main></main>
+    <main>
+        <!-- home Section start -->
+        <section>
+            <div class="home-sec">
+                 <div class="home-sec-content">
+                    <h2 class="home-sec-title mb-2">#1 Social Platform to Learn in <span class="badge-primary font-ta">தமிழ்</span></h2>
+                    <p class="home-sec-decs mb-1">Everyone deserve to learn technology in their native language ,to support this,we have create this simple platform where you can learn about technology</p>
+                    <div>
+                        <button class="btn-primary text-uppercase mr-1">watch it free</button>
+                        <button class="btn-outline-primary text-uppercase">learn more</button>
+                    </div>
+                 </div>
+                 <div>
+                    <img class="home-sec-img" src="./assets/img/web-design-illustration.png" alt="web-design-illustration">
+                 </div>
+            </div>
+        </section>
+        <!-- home Section End -->
+    </main>
     <!-- main End -->
 
     <!-- footer start -->

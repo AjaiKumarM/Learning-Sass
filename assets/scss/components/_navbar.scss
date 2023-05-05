@@ -1,0 +1,50 @@
+@use "../abstract/variables" as *;
+@use "../abstract/functions" as fun;
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10rem;
+    border-bottom: 1px solid rgb(230, 229, 229);
+
+    &-anc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    &-heading{
+        color: fun.theme-color('dark');
+    }
+    &-tamil{
+        font-family: $font-malar;
+    }
+    &-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+
+        &-items{
+            margin-right: 20px;
+
+            & a{
+                color: fun.theme-color('dark');
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                transition: all 200ms;
+
+                &:hover{
+                    color: fun.theme-color();
+                }
+
+                &.active{
+                    color: fun.theme-color();
+                }
+            }
+        }
+    }
+}

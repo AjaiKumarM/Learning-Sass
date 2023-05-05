@@ -1,0 +1,20 @@
+
+//Reset scss
+@use './base/reset' ;
+
+//global
+@use "./base/global";
+
+//utilities Animation
+@use "./utilities/animation";
+
+//components Button
+@use "./components/buttons";
+
+//Components Navbar
+@use "./components/navbar";
+
+//Pages
+
+//home
+@use "./pages/homesec"
