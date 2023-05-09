@@ -1,0 +1,98 @@
+@use "../abstract/mixing" as mix ;
+
+.contact{
+    padding: 5rem 8rem;
+    background-color: rgb(218, 217, 217);
+
+    @include mix.responsive(xs){
+        padding: 2rem 1rem;
+    }
+    @include mix.responsive(sm){
+        padding: 2rem 1rem;
+    }
+    @include mix.responsive(md){
+        padding: 2rem 1rem;
+    }
+    @include mix.responsive(lg){
+        padding: 5rem 3rem;
+    }
+    @include mix.responsive(xl){
+        padding: 5rem 8rem;
+    }
+
+    &-card{
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 2rem;
+
+        @include mix.responsive(xs){
+            flex-direction: column;  
+            justify-content: start;
+            align-items: start;
+        }
+        @include mix.responsive(sm){
+            flex-direction: column;  
+            justify-content: start;
+            align-items: start;
+        }
+        @include mix.responsive(md){
+            flex-direction: column;  
+            justify-content: start;
+            align-items: start;
+        }
+        @include mix.responsive(lg){
+            flex-direction: row;  
+            justify-content: center;
+            align-items: center;
+        }
+        @include mix.responsive(xl){
+            flex-direction: row;  
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-card-content{
+            flex-grow: 1;
+
+            @include mix.responsive(xs){
+                flex-grow: 0;
+                width: 100%;
+            }
+            @include mix.responsive(sm){
+                flex-grow: 0;
+                width: 100%;
+            }
+            @include mix.responsive(md){
+                flex-grow: 0;
+                width: 100%;
+            }
+            @include mix.responsive(lg){
+                flex-grow: 1;
+                
+            }
+            @include mix.responsive(xl){
+                flex-grow: 1;
+                
+            }
+            p{
+                color: grey;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-img{
+            width: 400px;
+            @include mix.responsive(lg){
+                width: 700px;
+            }
+            @include mix.responsive(xl){
+                width: 900px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,97 @@
+@use "../abstract/functions" as fun;
+@use "../abstract/mixing" as mix ;
+
+.about-sec{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: fun.theme-color();
+    padding: 5rem 10rem;
+    margin-bottom: 110px;
+    @include mix.responsive(xs){
+        padding: 3rem 2rem;
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+    @include mix.responsive(sm){
+        padding: 3rem 1rem;
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+    @include mix.responsive(md){
+        padding: 3rem 1rem;
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+    @include mix.responsive(lg){
+        padding: 5rem 8rem;
+        flex-direction: row;
+        margin-bottom: 110px;
+    }
+    @include mix.responsive(lg){
+        padding: 5rem 10rem;
+        flex-direction: row;
+        margin-bottom: 110px;
+    }
+    &-img{
+        width: 28rem;
+        @include mix.responsive(lg){
+            width: 28rem;
+        }
+        @include mix.responsive(xl){
+            width: 30rem;
+        }
+    }
+
+    &-content{
+        max-width: 500px;
+        @include mix.responsive(lg){
+            max-width: 450px;
+        }
+        @include mix.responsive(xl){
+            max-width: 500px;
+        }
+
+        &-title{
+            color: #fff;
+            font-size: 2rem;
+            @include mix.responsive(xs){
+                font-size: 1.5rem;
+                margin-top: 20px;
+            }
+            @include mix.responsive(sm){
+                font-size: 1.5rem;
+                margin-top: 40px;
+            }
+            @include mix.responsive(md){
+                font-size: 1.8rem;
+                margin-top: 40px;
+            }
+            @include mix.responsive(lg){
+                font-size: 2rem;
+                margin-top: 40px;
+            }
+            @include mix.responsive(xl){
+                font-size: 2rem;
+                margin-top: 40px;
+            }
+            margin-bottom: 10px;
+        }
+        &-desc{
+            color: #cfcfcfcf;
+            font-size: 14px;
+
+            a{
+                color: #fff;
+                transition: all 200ms;
+
+                &:hover{
+                    text-shadow: 2px 2px 5px #fff;
+                }
+            }
+
+        }
+
+    }
+}

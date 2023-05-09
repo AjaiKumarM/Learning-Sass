@@ -1,20 +1,44 @@
 
 //Reset scss
-@use './base/reset' ;
+@import './base/reset' ;
+
+//mixing
+@import "./abstract/mixing";
 
 //global
-@use "./base/global";
+@import "./base/global";
+
+
 
 //utilities Animation
-@use "./utilities/animation";
+@import "./utilities/animation";
+
+
 
 //components Button
-@use "./components/buttons";
+@import "./components/buttons";
 
 //Components Navbar
-@use "./components/navbar";
+@import "./components/navbar";
+
+@import "./components/nav-toggler";
 
 //Pages
 
 //home
-@use "./pages/homesec"
+@import "./pages/homesec";
+
+//About 
+@import "./pages/aboutsec";
+
+//roadmap
+@import "./pages/roadmap";
+
+//cousese
+@import "./pages/courses";
+
+//contact us page 
+@import "./pages/contact";
+
+//Fotter page 
+@import "./pages/footer"

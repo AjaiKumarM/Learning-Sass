@@ -1,3 +1,4 @@
+@use "../abstract/mixing" as mix ;
 
 .home-sec{
     display: flex;
@@ -5,17 +6,108 @@
     margin: 3rem 8rem;
     align-items: center;
 
+    @include mix.responsive(xs){
+        flex-direction: column;
+        margin: 2rem 1rem;
+    }
+    
+    @include mix.responsive(sm){
+        flex-direction: column;
+        margin: 2rem 1rem;
+    }
+    @include mix.responsive(md){
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+    @include mix.responsive(lg){
+        flex-direction: row;
+        margin: 2rem 8rem;
+    }
+    @include mix.responsive(xl){
+        flex-direction: row;
+        margin: 2rem 8rem;
+    }
     &-img{
         width: 530px;
+        @include mix.responsive(xs){
+           margin-top: 2rem;
+        }
+
+        @include mix.responsive(sm){
+            margin-top: 2rem;
+            max-width: 450px;
+         }
+         @include mix.responsive(md){
+            margin-top: 2rem;
+            max-width: 450px;
+         }
+         @include mix.responsive(lg){
+            margin-top: 0;
+            max-width: 400px;
+         }
+         @include mix.responsive(xl){
+            margin-top: 0;
+            max-width: 530px;
+         }
     }
     &-content{
         max-width: 450px;
     }
     &-title{
         font-size: 2.5rem;
+        @include mix.responsive(xs){
+            font-size: 1.9rem;
+
+            & span{
+                font-size: 1.5rem;
+            }
+        }
+        @include mix.responsive(sm){
+            font-size: 1.9rem;
+
+            & span{
+                font-size: 1.5rem;
+            }
+        }
+        @include mix.responsive(md){
+            font-size: 1.9rem;
+
+            & span{
+                font-size: 1.5rem;
+            }
+        }
+        @include mix.responsive(lg){
+            font-size: 2.2rem;
+
+            & span{
+                font-size: 2rem;
+            }
+        }
+        @include mix.responsive(xl){
+            font-size: 2.5rem;
+
+            & span{
+                font-size: 2.2rem;
+            }
+        }
     }
     &-decs{
         color: gray;
+        @include mix.responsive(xs){
+            font-size: 14px;
+        }
+        @include mix.responsive(sm){
+            font-size: 14px;
+        }
+        @include mix.responsive(md){
+            font-size: 14px;
+        }
+        @include mix.responsive(lg){
+            font-size: 16px;
+        }
+        @include mix.responsive(xl){
+            font-size: 16px;
+        }
     }
 
 }

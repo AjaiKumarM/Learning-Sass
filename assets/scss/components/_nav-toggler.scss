@@ -1,0 +1,77 @@
+@use "../abstract/functions" as fun;
+@use "../abstract/mixing" as mix;
+
+
+.navbar-menu {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    display: none;
+
+    @include mix.responsive(xs){
+        display: inline-flex;
+        margin-left: 150px;
+        text-align: right;
+        cursor: pointer;
+        
+    }
+    @include mix.responsive(sm){
+        display: inline-flex;
+        margin-left:380px;
+        cursor: pointer;
+        
+    }
+    @include mix.responsive(md){
+        display: inline-flex;
+        margin-left:380px;
+        cursor: pointer;
+        
+    }
+    @include mix.responsive(lg){
+        display: none;
+    }
+    @include mix.responsive(xl){
+        display: none;
+    }
+
+    &.active span:nth-child(3){
+        transform: translateX(40px);
+    }
+    &.active span:nth-child(2){
+        transform: translateY(0px) rotate(45deg);
+        width: 20px;
+        transition-delay: 0.125s;
+
+    }
+    &.active span:nth-child(1){
+        width: 20px;
+        transform: translateY(0px) rotate(315deg);
+        transition-delay: 0.25s;
+    }
+
+    & span{
+        position: absolute;
+        width: 20px;
+        height: 1.8px;
+        border-radius: 4px;
+        background-color: fun.theme-color();
+        transition: all 500ms;
+
+        &:nth-child(1){
+            transform: translateY(5px);
+            width: 9px;
+            left: 3px;
+        }
+        &:nth-child(2){
+            transform: translateY(-5px);
+            width: 13px;
+            left: 3px;
+        }
+    }
+}

@@ -1,0 +1,243 @@
+@use "../abstract/functions" as fun;
+@use "../abstract/mixing" as mix ;
+.roadmap{
+    margin-bottom: 90px;
+    @include mix.responsive(xs){
+        margin-bottom: 40px;
+    }
+    @include mix.responsive(sm){
+        margin-bottom: 0px;
+    }
+    @include mix.responsive(md){
+        margin-bottom: 0px;
+    }
+    @include mix.responsive(lg){
+        margin-bottom: 90px;
+    }
+    @include mix.responsive(xl){
+        margin-bottom: 90px;
+    }
+
+
+    &-content{
+        text-align: center;
+        margin-bottom: 100px;
+
+        &-title{
+            font-size: 1.4rem;
+        }
+        &-desc{
+            font-size: 14px;
+            color: grey;
+            margin-top: 10px;
+        }
+        .text-line{
+            width: 100px;
+            border-radius: 6px;
+            margin: 15px auto;
+            height: 8px;
+            background-image: linear-gradient(to right,red,purple);
+        }
+    }
+
+    &-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 7rem;
+
+        @include mix.responsive(xs){
+            flex-direction: column;
+            padding: 1rem 2rem;
+        }
+        @include mix.responsive(sm){
+            flex-direction: column;
+            padding: 1rem 1rem;
+        }
+        @include mix.responsive(md){
+            flex-direction: column;
+            padding: 1rem 1rem;
+        }
+        @include mix.responsive(lg){
+            flex-direction: row;
+            padding: 3rem 7rem;
+        }
+        @include mix.responsive(xl){
+            flex-direction: row;
+            padding: 3rem 7rem;
+        }
+
+
+        .roadmap-item{
+            text-align: center;
+            margin: 0 auto;
+            max-width: 300px;
+            filter: grayscale(120);
+            transition: all 300ms;
+            cursor: pointer;
+            position: relative;
+            transition: all 300ms;
+            @include mix.responsive(xs){
+             
+              max-width: 250px;
+              margin: 0 auto 150px;
+            }
+            @include mix.responsive(sm){
+             
+                max-width: 250px;
+                margin: 0 auto 150px;
+              }
+              @include mix.responsive(md){
+             
+                max-width: 250px;
+                margin: 0 auto 150px;
+              }
+              @include mix.responsive(lg){
+             
+                max-width: 300px;
+                margin: 0 auto ;
+              }
+              @include mix.responsive(xl){
+             
+                max-width: 300px;
+                margin: 0 auto ;
+              }
+
+            &:not(:last-child)::after{
+                content: '>';
+                position: absolute;
+                font-size: 4rem;
+                font-weight: 600;
+                border-radius: 5px;
+                top: 10%;
+                left: 300px;
+                transition: all 300ms ease-in-out; 
+
+                @include mix.responsive(xs){
+                transform: rotate(90deg);
+                top: 200px;
+                left: 110px;
+                font-size: 3rem;
+                }
+                @include mix.responsive(sm){
+                    transform: rotate(90deg);
+                    top: 200px;
+                    left: 110px;
+                    font-size: 3rem;
+                    }
+                    @include mix.responsive(md){
+                        transform: rotate(90deg);
+                        top: 200px;
+                        left: 110px;
+                        font-size: 3rem;
+                        }
+                        @include mix.responsive(lg){
+                            transform: rotate(0deg);
+                            top: 10%;
+                            left: 250px;
+                            font-size: 4rem;
+                            }
+                            @include mix.responsive(xl){
+                                transform: rotate(0deg);
+                                top: 10%;
+                                left: 300px;
+                                font-size: 4rem;
+                                }
+            }
+            &:hover::after{
+                left: 310px;
+                color: fun.theme-color();
+                @include mix.responsive(xs){
+                top: 215px;
+                left: 110px;
+                }
+                @include mix.responsive(sm){
+                    top: 215px;
+                    left: 110px;
+                }
+                @include mix.responsive(md){
+                        top: 215px;
+                        left: 110px;
+                }
+                @include mix.responsive(lg){
+                           left: 260px;
+                           top: 10%;
+
+                }
+                @include mix.responsive(lg){
+                    left: 310px;
+                    top: 10%;
+
+         }
+            }
+
+            &:hover{
+                filter: grayscale(0);
+            }
+
+            &:hover .roadmap-item-img::after{
+                animation: rotate-circle 5s linear infinite forwards;
+            }
+
+            @keyframes rotate-circle {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+
+            &-img{
+                position: relative;
+                img{
+                    width: 50px;
+                    margin-bottom: 30px;
+                }
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    border: 3px dotted fun.theme-color();
+                    width: 100px;
+                    height: 100px;
+                   bottom: 14px;
+                   left: 97px;
+                   border-radius: 50%;
+
+                   @include mix.responsive(xs){
+                left: 73px;
+                   }
+                   @include mix.responsive(sm){
+                    bottom: 15px;
+                    left: 73px;
+                       }
+                       @include mix.responsive(md){
+                        bottom: 15px;
+                        left: 73px;
+                           }
+                           @include mix.responsive(lg){
+                            bottom: 14px;
+                            left: 81px;
+                               }
+                               @include mix.responsive(xl){
+                                bottom: 14px;
+                                left: 97px;
+                                   }
+                }
+            }
+            &-content{
+                line-height: 2;
+
+                h5{
+                    font-weight: 600;
+                    font-size: 1rem;
+                    color: fun.theme-color();
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

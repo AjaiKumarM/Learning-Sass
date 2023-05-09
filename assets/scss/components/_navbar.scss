@@ -1,5 +1,6 @@
 @use "../abstract/variables" as *;
 @use "../abstract/functions" as fun;
+@use "../abstract/mixing" as mix;
 
 
 .navbar{
@@ -9,17 +10,59 @@
     padding: 1rem 10rem;
     border-bottom: 1px solid rgb(230, 229, 229);
 
+    @include mix.responsive(xs){
+        padding: 1rem 1rem;
+    }
+    @include mix.responsive(sm){
+        padding: 1rem 1rem;
+    }
+    @include mix.responsive(md){
+        padding: 1rem 1rem;
+    }
+    @include mix.responsive(lg){
+        padding: 1rem 3rem;
+    }
+    @include mix.responsive(xl){
+        padding: 1rem 7rem;
+    }
+
     &-anc{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
+        flex-grow: 1;
+        
     }
     &-heading{
         color: fun.theme-color('dark');
+
+        @include mix.responsive(xs){
+           font-size: 1rem;
+        }
+        @include mix.responsive(sm){
+            font-size: 1.2rem;
+            padding-left: 30px;
+         }
+         @include mix.responsive(md){
+            font-size: 1.2rem;
+            padding-left: 50px;
+         }
+         @include mix.responsive(lg){
+           font-size: 1.7rem;
+         }
     }
     &-tamil{
         font-family: $font-malar;
+        @include mix.responsive(xs){
+            font-size: 14px;
+        }
+        @include mix.responsive(sm){
+            font-size: 14px;
+        }
+        @include mix.responsive(md){
+            font-size: 14px;
+        }
+        @include mix.responsive(lg){
+            font-size: 1.4rem;
+        }
+        
     }
     &-list{
         display: flex;
@@ -27,11 +70,137 @@
         align-items: center;
         list-style: none;
 
+
+        @include mix.responsive(xs){
+            display: none;
+            position: fixed;
+            background-color: #fff;
+            overflow: hidden;
+            top: 56px;
+            left: 0%;
+            width: 100%;
+            height: 0;
+            padding: 0 20px;
+
+            &.show{
+                display: block;
+                animation: navbar 400ms forwards;
+
+                @keyframes navbar{
+                    0%{
+                        height: 0;
+                    }
+                    100%{
+                        height: 40vh;
+                    }
+                }
+            }
+        }
+
+        @include mix.responsive(sm){
+            display: none;
+            position: fixed;
+            background-color: #fff;
+            overflow: hidden;
+            top: 13%;
+            left: 0%;
+            width: 100%;
+            height: 0;
+            padding: 0 50px;
+            
+
+            &.show{
+                display: block;
+                animation: navbar 400ms forwards;
+
+                @keyframes navbar{
+                    0%{
+                        height: 0;
+                    }
+                    100%{
+                        height: 50vh;
+                    }
+                }
+            }
+        }
+        @include mix.responsive(md){
+            display: none;
+            position: fixed;
+            background-color: #fff;
+            overflow: hidden;
+            top: 13%;
+            left: 0%;
+            width: 100%;
+            height: 0;
+            padding: 0 70px;
+
+            &.show{
+                display: block;
+                animation: navbar 400ms forwards;
+
+                @keyframes navbar{
+                    0%{
+                        height: 0;
+                    }
+                    100%{
+                        height: 40vh;
+                    }
+                }
+            }
+        }
+        @include mix.responsive(lg){
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            overflow: visible;
+            position: relative;
+        }
+        @include mix.responsive(xl){
+            display: flex;
+            position: relative;
+        justify-content: center;
+        overflow: visible;
+        align-items: center;
+        list-style: none;
+        }
+
         &-items{
             margin-right: 20px;
 
+            @include mix.responsive(xs){
+                padding-bottom: 10px;
+                padding-top: 5px;
+                border-bottom: 1px solid rgb(216, 215, 215);
+                
+            }
+            @include mix.responsive(sm){
+                padding-bottom: 10px;
+                padding-top: 5px;
+                border-bottom: 1px solid rgb(216, 215, 215);
+               
+            } @include mix.responsive(md){
+                padding-bottom: 10px;
+                padding-top: 5px;
+                border-bottom: 1px solid rgb(216, 215, 215);
+                
+            }
+            @include mix.responsive(lg){
+                padding-bottom: 0px;
+                padding-top: 0px;
+                border-bottom: none;
+               
+            }
+            @include mix.responsive(xl){
+                padding-bottom: 0;
+                padding-top: 0;
+                border-bottom: none;
+               
+            }
+
             & a{
-                color: fun.theme-color('dark');
+                color: black;
                 font-size: 14px;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -46,5 +215,24 @@
                 }
             }
         }
+    }
+}
+
+.navbar-stiyky{
+    position: sticky;
+    top: -1px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 58px;
+
+    z-index: 2;
+
+    @include mix.responsive(lg){
+        height: 75px;
+    }
+    @include mix.responsive(xl){
+        height: 75px;
     }
 }

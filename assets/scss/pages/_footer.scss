@@ -1,0 +1,43 @@
+@use "../abstract/functions" as fuc;
+@use "../abstract/mixing" as mix ;
+
+.footer{
+    padding: 2rem 8rem;
+    text-align: center;
+    background-color: fuc.theme-color();
+
+    @include mix.responsive(xs){
+        padding: 2rem 1rem;
+    }
+    @include mix.responsive(sm){
+        padding: 2rem 1rem;
+    }
+    &-heading{
+        h3{
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        p{
+            color: rgb(230, 228, 228);
+            font-size: 14px;
+        }
+    }
+
+    &-link{
+        display: flex;
+        margin: 20px 0;
+        list-style: none;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+        &-item{
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 300ms;
+            &:hover{
+                color: #e9e7e7;
+            }
+        }
+    }
+}

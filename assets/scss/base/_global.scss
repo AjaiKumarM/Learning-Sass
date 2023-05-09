@@ -35,7 +35,31 @@ $directions:"top","bottom","right",left;
 
     @each $direction in $directions{
         .m#{str-slice($direction,0,1)}-#{$value}{
-            margin-#{$direction}: #{$value}rem;
+            margin-#{$direction}: #{$value - 0.3}rem;
         }
     }
+}
+
+.form-control{
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 10px; 
+    background-color: rgb(226, 223, 223);
+    caret-color: fun.theme-color();
+    width: 100%;
+    outline: none;
+    outline-color: blue;
+
+    &:focus{
+        outline: 2px solid fun.theme-color();
+    }
+    
+}
+.resize-none{
+    resize: none;
+}
+
+.responsive-img{
+    max-width: 100%;
+    height: auto;
 }

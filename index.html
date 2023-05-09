@@ -1,71 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web design with SASS</title>
 
     <!-- Title Logo -->
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- font awosome cdn link -->
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Css link -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <!-- header start -->
-    <header>
-        <div class="navbar">
-            <div>
-                <a href="/" class="navbar-anc"><h2 class="navbar-heading">WebDesign  <span class="navbar-tamil">{ தமிழ் }</span></h2></a>
-            </div>
-            <div>
-                <ul class="navbar-list">
-                    <li class="navbar-list-items">
-                        <a class="active" href="/">home</a>
-                    </li>
-                    <li class="navbar-list-items">
-                        <a href="/">about</a>
-                    </li>
-                    <li class="navbar-list-items">
-                        <a href="/">roadmap</a>
-                    </li>
-                    <li class="navbar-list-items">
-                        <a href="/">courses</a>
-                    </li>
-                    <li >
-                        <a href="/" class="btn-primary">contact us</a>
-                    </li>
-                </ul>
-            </div>
+    <header class="navbar-stiyky">
+      <div class="navbar">
+        <div>
+          <a href="/" class="navbar-anc"
+            ><h2 class="navbar-heading">
+              WebDesign <span class="navbar-tamil">{ தமிழ் }</span>
+            </h2></a
+          >
         </div>
+        <div class="navbar-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          <ul class="navbar-list">
+            <li class="navbar-list-items">
+              <a class="active" href="#home">home</a>
+            </li>
+            <li class="navbar-list-items">
+              <a href="#about">about</a>
+            </li>
+            <li class="navbar-list-items">
+              <a href="#roadmap">roadmap</a>
+            </li>
+            <li class="navbar-list-items">
+              <a href="#courses">courses</a>
+            </li>
+            <li class="navbar-list-items">
+              <a href="#contact" >contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <!-- headers End -->
 
     <!-- main start -->
     <main>
-        <!-- home Section start -->
-        <section>
-            <div class="home-sec">
-                 <div class="home-sec-content">
-                    <h2 class="home-sec-title mb-2">#1 Social Platform to Learn in <span class="badge-primary font-ta">தமிழ்</span></h2>
-                    <p class="home-sec-decs mb-1">Everyone deserve to learn technology in their native language ,to support this,we have create this simple platform where you can learn about technology</p>
-                    <div>
-                        <button class="btn-primary text-uppercase mr-1">watch it free</button>
-                        <button class="btn-outline-primary text-uppercase">learn more</button>
-                    </div>
-                 </div>
-                 <div>
-                    <img class="home-sec-img" src="./assets/img/web-design-illustration.png" alt="web-design-illustration">
-                 </div>
+      <!-- home Section start -->
+      <section id="home" class="mb-10">
+        <div class="home-sec">
+          <div class="background-partical">
+            <div class="box-1"></div>
+            <div class="box-2"></div>
+            <div class="box-3"></div>
+            <div class="round-1"></div>
+            <div class="round-2"></div>
+            <div class="round-3"></div>
+            <div class="dot-1"></div>
+            <div class="dot-2"></div>
+            <div class="dot-3"></div>
+            <div class="heart-1"><i class="fa-regular fa-heart fa-lg"></i></div>
+            <div class="heart-2"><i class="fa-regular fa-heart fa-lg"></i></div>
+          </div>
+          <div class="home-sec-content">
+            <h2 class="home-sec-title mb-2">
+              #1 Social Platform to Learn in
+              <span class="badge-primary font-ta">தமிழ்</span>
+            </h2>
+            <p class="home-sec-decs mb-2">
+              Everyone deserve to learn technology in their native language ,to
+              support this,we have create this simple platform where you can
+              learn about technology
+            </p>
+            <div>
+              <button class="btn-primary text-uppercase mr-1">
+                <i class="fa-solid fa-video mr-1"></i> watch it free
+              </button>
+              <button class="btn-outline-primary text-uppercase">
+                learn more
+              </button>
             </div>
-        </section>
-        <!-- home Section End -->
+          </div>
+          <div>
+            <img
+              class="home-sec-img responsive-img"
+              src="./assets/img/web-design-illustration.png"
+              alt="web-design-illustration"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- home Section End -->
+
+      <!-- About section start -->
+      <section id="about" class="mt-5">
+        <div class="about-sec">
+          <div>
+            <img
+              src="./assets/img/web-development-illustration.png"
+              alt="web-development-illustration"
+              class="about-sec-img responsive-img"
+            />
+          </div>
+          <div class="about-sec-content">
+            <h2 class="about-sec-content-title">
+              Learning never been this easy!
+            </h2>
+            <p class="about-sec-content-desc">
+              We all speak native language to native people arond us. Why we
+              have to learn technology only in English?
+              <a href="/"
+                >Learning technology</a> in native language will help us to
+                understand the concept clearer and easier . So we start this
+                initiative , where we will be teaching about technology in
+                simple <span class="font-ta">தமிழ்</span>(Tamil)
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- About section end -->
+
+      <!-- RoadMap Section Start-->
+      <section id="roadmap">
+        <div class="roadmap">
+            <div class="roadmap-content">
+                <h3 class="roadmap-content-title">Roadmap to Expertise</h3>
+                <p class="roadmap-content-desc">Start it slow,finish it with style</p>
+                <div class="text-line"></div>
+            </div>
+            <div class="roadmap-items">
+                <div class="roadmap-item mr-3">
+                    <div class="roadmap-item-img">
+                        <img src="/assets/img/technologies/html-logo.png" alt="html-logo">
+                    </div>
+                    <div class="roadmap-item-content">
+                        <h5>Learn HTML5</h5>
+                        <p>Learn how to structure the html webpages in Tamil</p>
+                    </div>
+                </div>
+                <div class="roadmap-item mr-3">
+                    <div class="roadmap-item-img">
+                        <img src="/assets/img/technologies/css-logo.png" alt="css-logo">
+                    </div>
+                    <div class="roadmap-item-content">
+                        <h5>Learn CSS</h5>
+                        <p>Learn how to style good loooking webpages in Tamil</p>
+                    </div>
+                </div>
+                <div class="roadmap-item mr-3">
+                    <div class="roadmap-item-img">
+                        <img src="/assets/img/technologies/js-logo.jpg" alt="js-logo">
+                    </div>
+                    <div class="roadmap-item-content">
+                        <h5>Learn Javascript</h5>
+                        <p>Learn how to interact with toggle webpages in Tamil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- RoadMap section end -->
+
+      <!-- Courses section start -->
+      <section id="courses">
+        <div class="courses">
+            <div class="courses-heading">
+                <h3>Free Courses to Enroll</h3>
+                <p>Start from beginning no pre-requesties required</p>
+            </div>
+            <div class="courses-cards">
+                <div class="courses-card">
+                    <div>
+                        <img src="./assets/img/Courses/learn-html-essentials-in-tamil.jpg" alt="html image" class="courses-card-img">
+                    </div>
+                    <div class="courses-card-content">
+                        <h3>
+                            Learn HTML for Beginner
+                        </h3>
+                        <p>Learn how to build web layout & structure with best prartical in mind, we will be building some web ui structure with sermantic html tags. For more information,click here</p>
+                    </div>
+                </div>
+                <div class="courses-card">
+                    <div>
+                        <img src="./assets/img/Courses/learn-css3-in-tamil.jpg" alt="CSS image" class="courses-card-img">
+                    </div>
+                    <div class="courses-card-content">
+                        <h3>
+                            Learn CSS for Beginner
+                        </h3>
+                        <p>Website without Css will be boring right? in this courses, learn to build web user interface with awsome css with clear explanations in tamil for more information click here</p>
+                    </div>
+                </div>
+                <div class="courses-card">
+                    <div>
+                        <img src="./assets/img/Courses/learn-javascript-in-tamil.jpg" alt="javascript image" class="courses-card-img">
+                    </div>
+                    <div class="courses-card-content">
+                        <h3>
+                            Learn Javascript
+                        </h3>
+                        <p>Make interface website easily ,you wil be learning javascript basics from start to end with pratical appilcation ans we gonna use this knowledge to build some UI with interactivity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="courses-footer">
+                <p>For more courses , visit <a href="/">cyberdude.com</a></p>
+            </div>
+        </div>
+      </section>
+      <!-- Courses section end -->
+
+    <!-- contact section start -->
+    <section id="contact">
+        <div class="contact">
+            <div class="contact-card">
+                    <form class="contact-card-content" action="">
+                            <h3>Send us Message</h3>
+                            <p>Share your info briefly as possible</p>
+                        <div>
+                            <input type="text" name="name" placeholder="Your Name" class="form-control mb-2">
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Your Email" class="form-control mb-2">
+                        </div>
+                        <div>
+                            <input type="text" name="subject" placeholder="Subject" class="form-control mb-2">
+                        </div>
+                        <div>
+                            <textarea name="comments"  cols="30" rows="10" placeholder="Share your message in detail" class="form-control resize-none mb-2"></textarea>
+                        </div>
+                    </form>
+                <div>
+                    <img src="./assets/img/cyberdude-contact.png" alt="cyberdude-contact" class="responsive-img contact-card-img">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- contact section end -->
     </main>
     <!-- main End -->
 
     <!-- footer start -->
-    <footer></footer>
+    <footer>
+      <div class="footer">
+        <div class="footer-heading">
+          <h3>WebDesign <span class="font-ta">{ தமிழ் }</span></h3>
+          <p>An initiative by cyberdude <i class="fa-solid fa-heart fa-beat-fade ml-1"></i></p>
+        </div>
+        <div >
+          <ul class="footer-link">
+            <li class="footer-link-item"><i class="fa-brands fa-facebook"></i></li>
+            <li class="footer-link-item"><i class="fa-brands fa-instagram"></i></li>
+            <li class="footer-link-item"><i class="fa-brands fa-github"></i></li>
+            <li class="footer-link-item"><i class="fa-brands fa-youtube"></i></li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2021-All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
     <!-- footer End -->
+  </body>
 
-</body>
+  <script>
+    let menuBar = document.querySelector('.navbar-menu');
+    let menulist = document.querySelector('.navbar-list');
+
+    menuBar.addEventListener('click',()=>{
+      menuBar.classList.toggle('active');
+      menulist.classList.toggle("show");
+    })
+      
+  </script>
+  <script src="./assets/js/main.js"></script>
 </html>

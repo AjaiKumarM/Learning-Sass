@@ -1,4 +1,6 @@
+@use "../abstract/functions" as fun ;
 
+@use "../abstract/mixing"  as mix ;
 
 .navbar-tamil{
     animation: color-change 15s infinite forwards;
@@ -17,5 +19,153 @@
     }
     100%{
         color: red;
+    }
+}
+
+.background-partical{
+    @include mix.responsive(xs){
+        display: none;
+    }
+    .box-1{
+        background-color: transparent;
+        border: 2px solid fun.theme-color();
+        width: 12px;
+        border-radius: 4px;
+        height: 12px;
+        position: absolute;
+        z-index: -1;
+        top: 20%;
+        left: 7%;
+        animation: rotate-ani 5s linear infinite forwards;
+    }
+    .box-2{
+        background-color: transparent;
+        border: 2px solid fun.theme-color();
+        width: 12px;
+        border-radius: 4px;
+        height: 12px;
+        position: absolute;
+        z-index: -1;
+        top: 40%;
+        right: 7%;
+        animation: rotate-ani 5s linear infinite forwards;
+    }
+    .box-3{
+        background-color: transparent;
+        border: 2px solid fun.theme-color();
+        width: 12px;
+        border-radius: 4px;
+        height: 12px;
+        position: absolute;
+        z-index: -1;
+        top: 90%;
+        left: 60%;
+        animation: rotate-ani 5s linear infinite forwards;
+    }
+
+    .round-1{
+        background-color: transparent;
+        border: 2px solid fun.theme-color("red");
+        width: 12px;
+        border-radius: 50%;
+        height: 12px;
+        position: absolute;
+        z-index: -1;
+        top: 90%;
+        left: 20%;
+        animation: rotate-ani 5s linear infinite forwards;
+    }
+
+    .round-2{
+        background-color: transparent;
+        border: 2px solid fun.theme-color("red");
+        width: 12px;
+        border-radius: 50%;
+        height: 12px;
+        position: absolute;
+        z-index: -1;
+        top: 80%;
+        right: 10%;
+        animation: rotate-ani 5s linear infinite forwards;
+    }
+
+    .round-3{
+        background-color: transparent;
+        border: 2px solid fun.theme-color("red");
+        width: 12px;
+        border-radius: 50%;
+        height: 12px;
+        position: absolute;
+        z-index: -1;
+        top: 30%;
+        left: 50%;
+        animation: rotate-ani 5s linear infinite forwards;
+
+        @include mix.responsive(sm){
+            top: 15%;
+        }
+    }
+
+    .dot-1{
+        background-color: fun.theme-color();
+        width: 7px;
+        border-radius: 50%;
+        height: 7px;
+        position: absolute;
+        z-index: -1;
+        top: 80%;
+        left: 2%;
+        animation: rotate-ani 5s linear infinite forwards;
+    }
+
+    .dot-2{
+        background-color: fun.theme-color('red');
+        width: 7px;
+        border-radius: 50%;
+        height: 7px;
+        position: absolute;
+        z-index: -1;
+        top: 95%;
+        left: 40%;
+        animation: rotate-ani 5s linear infinite forwards;
+    }
+
+    .dot-3{
+        background-color: fun.theme-color('red');
+        width: 7px;
+        border-radius: 50%;
+        height: 7px;
+        position: absolute;
+        z-index: -1;
+        top: 20%;
+        right: 5%;
+        animation: rotate-ani 5s linear infinite forwards;
+    }
+
+    .heart-1{
+        color: fun.theme-color('red');
+        position: absolute;
+        z-index: -1;
+        top: 60%;
+        left: 10%;
+        animation: rotate-ani 8s linear infinite forwards;
+    }
+
+    .heart-2{
+        color: fun.theme-color('red');
+        position: absolute;
+        z-index: -1;
+        top: 55%;
+        right: 10%;
+        animation: rotate-ani 8s linear infinite forwards;
+    }
+}
+
+@keyframes rotate-ani {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }
