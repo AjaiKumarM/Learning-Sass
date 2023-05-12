@@ -480,6 +480,47 @@ Extra extra large	 xxl	≥1400px
     transform: rotate(360deg);
   }
 }
+.en-hidden.about-sec-content {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 800ms ease;
+}
+.en-hidden.courses-card {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+}
+.en-hidden.courses-card:nth-child(1) {
+  transition: all 800ms ease;
+}
+.en-hidden.courses-card:nth-child(2) {
+  transition: all 800ms ease;
+}
+.en-hidden.courses-card:nth-child(3) {
+  transition: all 800ms ease;
+}
+
+.en-show.about-sec-content {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.en-show.courses-card {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.en-show.courses-card:nth-child(1) {
+  transition-delay: 100ms;
+}
+.en-show.courses-card:nth-child(2) {
+  transition-delay: 200ms;
+}
+.en-show.courses-card:nth-child(3) {
+  transition-delay: 300ms;
+}
+
 .btn, .btn-outline-primary, .btn-primary {
   padding: 10px 15px;
   border: none;

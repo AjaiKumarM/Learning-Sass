@@ -43,3 +43,18 @@ const removeTogglefun = ()=>{
 }
 removeTogglefun()
 NavScrollFun()
+
+//Scroll Animation 
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        console.log(entry);
+        if(entry.isIntersecting){
+            entry.target.classList.add('en-show')
+        }else{
+            entry.target.classList.remove("en-show")
+        }
+    })
+})
+
+const hideElement = document.querySelectorAll(".en-hidden");
+hideElement.forEach((el)=> observer.observe(el))
